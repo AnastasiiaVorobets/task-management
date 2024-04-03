@@ -20,7 +20,7 @@ export class LoginComponent {
   login(): void {
     if (this.username === 'username' && this.password === 'password') {
       console.log('Login successful');
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/board']);
     }
     else {
       this.errorMessage = 'Invalid username or password';
