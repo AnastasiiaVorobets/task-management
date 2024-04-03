@@ -1,0 +1,13 @@
+<div class="task-list">
+  <ul>
+    <li *ngFor="let task of tasks">
+      <div>
+        <app-task-item
+          [task]="task"
+          (remove)="removeTask($event)"
+          (edit)="editTask($event)"
+        ></app-task-item>
+      </div>
+    </li>
+  </ul>
+</div>

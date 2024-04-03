@@ -1,0 +1,15 @@
+<div class="container">
+  <app-task-form
+    (add)="addTask($event)"
+  ></app-task-form>
+  <app-task-list
+    [tasks]="tasks"
+    (remove)="removeTask($event)"
+    (edit)="editTask($event)"
+  ></app-task-list>
+  <app-task-edit
+    *ngIf="selectedTask !== undefined"
+    [editedTask]="selectedTask"
+    (save)="saveChanges($event)"
+  ></app-task-edit>
+</div>
